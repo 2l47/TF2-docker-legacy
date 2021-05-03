@@ -1,0 +1,26 @@
+Welcome! Our map rotation is as follows. You can scramble teams with "!scramble" and nominate and change the map with "!nominate" and "!rtv".
+
+=== Official TF2 maps ===
+
+arena_offblast_final
+arena_byre
+pd_watergate
+pd_snowville_event // X-mas sawmill
+pl_hasslecastle // Spooky upward
+pl_precipice_event_final
+pl_rumble_event
+plr_hightower_event // Spooky hightower
+
+=== Featured community workshop maps ===
+
+cp_glassworks_rc6a
+cp_stoneyridge_rc2
+cp_firewatch_b4
+ctf_helltrain_event_final2
+ctf_frosty_rc1
+koth_slaughter_b2a
+koth_trainsawlaser_rc2
+koth_trainsawlaser_pro_rc1
+mario_kart_reanimated
+pl_breadspace_b11
+pl_upward_abandoned
