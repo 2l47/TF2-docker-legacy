@@ -23,6 +23,13 @@ sudo docker cp server-resources-updater.zip tf2-dedicated_rgl:/home/steam/tf-ded
 rm server-resources-updater.zip
 sudo docker exec -it tf2-dedicated_rgl unzip -o /home/steam/tf-dedicated/tf/server-resources-updater.zip -d /home/steam/tf-dedicated/tf/
 
+# Install SOAP DM plugin
+git clone https://github.com/sapphonie/SOAP-TF2DM
+pushd SOAP-TF2DM
+cp -vr addons cfg ../tf2-data_rgl/tf/
+popd
+rm -rf SOAP-TF2DM
+
 # Copy in motd_rgl.txt and mapcycle_rgl.txt
 cp -v motd_rgl.txt tf2-data_rgl/tf/cfg/motd_default.txt
 cp -v mapcycle_rgl.txt tf2-data_rgl/tf/cfg/
