@@ -36,6 +36,13 @@ sudo docker cp f2-sourcemod-plugins.zip tf2-dedicated_rgl:/home/steam/
 rm f2-sourcemod-plugins.zip
 sudo docker exec -it tf2-dedicated_rgl unzip -o /home/steam/f2-sourcemod-plugins.zip -d /home/steam/tf-dedicated/tf/addons/sourcemod/plugins/
 
+# Install cURL dependency for F2's logs.tf plugin
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/sourcemod-curl-extension/curl_1.3.0.0_linux.zip
+sudo docker cp curl_1.3.0.0_linux.zip tf2-dedicated_rgl:/home/steam/
+rm curl_1.3.0.0_linux.zip
+sudo docker exec -it tf2-dedicated_rgl unzip -o /home/steam/curl_1.3.0.0_linux.zip -d /home/steam/tf-dedicated/tf/addons/sourcemod/
+echo logstf_apikey `cat logstf_apikey.txt` >>tf2-data_rgl/tf/cfg/server.cfg
+
 # Install demos.tf plugin and cURL dependency
 wget https://github.com/demostf/plugin/raw/master/demostf.smx
 mv -v demostf.smx tf2-data_rgl/tf/addons/sourcemod/
