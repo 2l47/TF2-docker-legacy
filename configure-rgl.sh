@@ -36,6 +36,12 @@ sudo docker cp f2-sourcemod-plugins.zip tf2-dedicated_rgl:/home/steam/
 rm f2-sourcemod-plugins.zip
 sudo docker exec -it tf2-dedicated_rgl unzip -o /home/steam/f2-sourcemod-plugins.zip -d /home/steam/tf-dedicated/tf/addons/sourcemod/plugins/
 
+# Install demos.tf plugin and cURL dependency
+wget https://github.com/demostf/plugin/raw/master/demostf.smx
+mv -v demostf.smx tf2-data_rgl/tf/addons/sourcemod/
+echo sm_demostf_apikey `cat demostf_apikey.txt` >>tf2-data_rgl/tf/cfg/server.cfg
+wget https://github.com/spiretf/docker-comp-server/raw/master/curl.ext.so --directory-prefix tf2-data_rgl/tf/addons/sourcemod/extensions/
+
 # Copy in motd_rgl.txt and mapcycle_rgl.txt
 cp -v motd_rgl.txt tf2-data_rgl/tf/cfg/motd_default.txt
 cp -v mapcycle_rgl.txt tf2-data_rgl/tf/cfg/
